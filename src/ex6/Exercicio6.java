@@ -22,6 +22,6 @@ public class Exercicio6 {
             maior = value3;
         }
 
-        System.out.println("Maior número é: " + maior"");
+        System.out.println("Maior número é: " + maior);
     }
 }
