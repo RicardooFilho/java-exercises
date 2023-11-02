@@ -2,6 +2,7 @@ package ex17;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.time.format.ResolverStyle;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -14,11 +15,13 @@ determine se a mesma é uma data válida.*/
         System.out.println("Informe um data: ");
         String date = scan.next();
 
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/uuuu");
+        String dateFormat = "dd/MM/yyyy";
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(dateFormat);
 
         LocalDate localDate = LocalDate.parse(date, formatter);
 
-        if (localDate != null && localDate.getYear() >= 1 && localDate.getYear() <= 9999) {
+        if (localDate != null) {
             System.out.println("É uma data válida");
         } else {
             System.out.println("Não é uma data válida");
