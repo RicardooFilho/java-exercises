@@ -51,7 +51,19 @@ entre outros. Exemplo:
             } else {
                 units = numbers[2] + " unidades";
             }
-        }
+        } else if (numbers.length == 2) {
+            if (numbers[0].equals("1")) {
+                dozens = numbers[0] + " dezena e ";
+            } else {
+                dozens = numbers[0] + " dezenas e ";
+            }
+
+            if (numbers[1].equals("1")) {
+                units = numbers[1] + " unidade";
+            } else {
+                units = numbers[1] + " unidades";
+            }
+        } else if (numbers.len)
 
         System.out.println(hundreds + dozens + units);
 //        System.out.println(numbers[0] + " centenas, " + numbers[1] + " dezenas e " + numbers[2] + " unidades");
