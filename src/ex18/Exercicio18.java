@@ -16,11 +16,11 @@ entre outros. Exemplo:
 
         String[] numbers;
 
-        String hundreds = null;
+        String hundreds = "";
 
-        String dozens = null;
+        String dozens = "";
 
-        String units = null;
+        String units = "";
 
         Integer num = 0;
 
@@ -63,11 +63,14 @@ entre outros. Exemplo:
             } else {
                 units = numbers[1] + " unidades";
             }
-        } else if (numbers.len)
+        } else if (numbers.length == 1) {
+            if (numbers[0].equals("1")) {
+                units = numbers[0] + " unidade";
+            } else {
+                units = numbers[0] + " unidades";
+            }
+        }
 
         System.out.println(hundreds + dozens + units);
-//        System.out.println(numbers[0] + " centenas, " + numbers[1] + " dezenas e " + numbers[2] + " unidades");
-//        System.out.println(numbers[0] + " dezenas e " + numbers[1] + " unidades");
-//        System.out.println(numbers[0] + " unidades");
     }
 }
